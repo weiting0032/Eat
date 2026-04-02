@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: wonderfood-telegram-streamlit
+    env: python
+    plan: starter
+    buildCommand: |
+      pip install -r requirements.txt
+      chmod +x start.sh
+    startCommand: ./start.sh
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: AI_PROVIDER
+        value: gemini
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-1.5-flash
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: DB_PATH
+        value: /var/data/app.db
+      - key: UPLOAD_DIR
+        value: /var/data/uploads
+      - key: TIMEZONE
+        value: Asia/Taipei
+      - key: DEFAULT_DAILY_CALORIE_TARGET
+        value: "1232"
+      - key: STREAMLIT_ADMIN_PASSWORD
+        sync: false
+    disk:
+      name: wonderfood-disk
+      mountPath: /var/data
+      sizeGB: 1
