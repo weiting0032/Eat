@@ -1,0 +1,8 @@
+python-telegram-bot==21.6
+google-generativeai==0.8.3
+openai==1.51.2
+Pillow==10.4.0
+python-dotenv==1.0.1
+streamlit==1.39.0
+pandas==2.2.3
+supervisor==4.2.5
