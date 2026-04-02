@@ -2,7 +2,6 @@ services:
   - type: web
     name: wonderfood-telegram-streamlit
     env: python
-    plan: starter
     buildCommand: |
       pip install -r requirements.txt
       chmod +x start.sh
@@ -30,7 +29,3 @@ services:
         value: "1232"
       - key: STREAMLIT_ADMIN_PASSWORD
         sync: false
-    disk:
-      name: wonderfood-disk
-      mountPath: /var/data
-      sizeGB: 1
