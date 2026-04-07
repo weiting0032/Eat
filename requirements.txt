@@ -6,3 +6,4 @@ python-dotenv==1.0.1
 streamlit==1.39.0
 pandas==2.2.3
 supervisor==4.2.5
+setuptools>=70.0.0
