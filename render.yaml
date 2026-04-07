@@ -4,6 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: |
+      python -m pip install --upgrade pip setuptools wheel
       pip install -r requirements.txt
       chmod +x start.sh
     startCommand: ./start.sh
@@ -23,9 +24,9 @@ services:
       - key: OPENAI_MODEL
         value: gpt-4o-mini
       - key: DB_PATH
-        value: /var/data/app.db
+        value: data/app.db
       - key: UPLOAD_DIR
-        value: /var/data/uploads
+        value: uploads
       - key: TIMEZONE
         value: Asia/Taipei
       - key: DEFAULT_DAILY_CALORIE_TARGET
