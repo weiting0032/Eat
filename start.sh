@@ -10,7 +10,7 @@ python --version
 echo "Pip version:"
 pip --version
 
-echo "Installing setuptools/wheel..."
+echo "Installing compatible setuptools/wheel..."
 python -m pip install --upgrade pip
 python -m pip install setuptools==80.9.0 wheel==0.46.3
 
