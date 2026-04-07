@@ -27,6 +27,13 @@ from db import (
     upsert_user,
 )
 
+from config import settings
+
+print("AI_PROVIDER:", settings.ai_provider)
+if settings.gemini_api_key:
+    print("GEMINI_API_KEY suffix:", settings.gemini_api_key[-6:])
+print("GEMINI_MODEL:", settings.gemini_model)
+
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO,
