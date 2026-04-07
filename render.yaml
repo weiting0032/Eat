@@ -8,6 +8,8 @@ services:
       chmod +x start.sh
     startCommand: ./start.sh
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.10
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: AI_PROVIDER
