@@ -12,7 +12,7 @@ pip --version
 
 echo "Installing setuptools/wheel..."
 python -m pip install --upgrade pip
-python -m pip install setuptools wheel
+python -m pip install setuptools==80.9.0 wheel==0.46.3
 
 echo "Testing pkg_resources..."
 python - <<'PY'
